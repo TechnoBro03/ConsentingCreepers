@@ -12,8 +12,8 @@ tag @e[type=creeper] remove consenting.reachable
 tag @e[type=creeper] remove consenting.hit
 tag @e[type=creeper] remove consenting.src
 tag @e[type=creeper] remove consenting.los_now
+tag @e[type=creeper] remove consenting.asking
 tag @a remove consenting.asked
-tag @a remove consenting.answering
 
 dialog clear @a
 
@@ -22,9 +22,10 @@ scoreboard objectives remove cc_fuse
 scoreboard objectives remove cc_ray
 scoreboard objectives remove cc_wait
 scoreboard objectives remove cc_range
+scoreboard objectives remove cc_qid
 scoreboard objectives remove cc_consent
 
-data remove storage cc:consent verdict
 data remove storage cc:consent range
+data remove storage cc:consent qid
 
 tellraw @a {"text":"[Consenting Creepers] Uninstalled. Remove the datapack and reload.","color":"aqua"}

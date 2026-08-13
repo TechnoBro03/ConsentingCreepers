@@ -7,7 +7,7 @@ $execute unless entity @p[distance=..$(range)] run return run function cc:intern
 tag @s add consenting.awaiting
 scoreboard players set @s cc_wait 200
 
-# Somebody nearby already holds an open question, and their answer covers this creeper too. Re-showing the dialog would only reset it.
-$execute if entity @a[tag=consenting.asked,distance=..$(range)] run return 0
-
+# Ask whoever is nearest. consent_ask decides whether that is a new question or one they already hold.
+tag @s add consenting.asking
 $execute as @p[distance=..$(range)] run function cc:internal/consent_ask
+tag @s remove consenting.asking

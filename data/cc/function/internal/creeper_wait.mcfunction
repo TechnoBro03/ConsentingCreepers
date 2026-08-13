@@ -3,8 +3,9 @@
 # Lost interest, so there is nothing left to consent to
 execute unless entity @s[tag=consenting.ignited] unless entity @s[predicate=cc:targeting_player] run return run function cc:internal/consent_stand_down
 
-# Carried or walked out of its own reach
+# The player it asked was carried or walked out of its reach
 execute store result storage cc:consent range int 1 run scoreboard players get @s cc_range
+execute store result storage cc:consent qid int 1 run scoreboard players get @s cc_qid
 function cc:internal/creeper_in_reach with storage cc:consent
 execute unless entity @s[tag=consenting.reachable] run return run function cc:internal/consent_stand_down
 
