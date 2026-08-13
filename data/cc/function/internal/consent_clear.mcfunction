@@ -1,4 +1,4 @@
-# Run AS/AT a player who is done being asked
+# Run AS a player who is done being asked
 
 dialog clear @s
 tag @s remove consenting.asked

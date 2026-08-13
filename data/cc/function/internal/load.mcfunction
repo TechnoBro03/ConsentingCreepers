@@ -2,7 +2,7 @@
 
 # cc_max   creeper: The Fuse value.
 # cc_fuse  creeper: Ticks remaining until explosion.
-# cc_ray   creeper: Steps remaining to check for line of sight to the player.
+# cc_ray   creeper: Line of sight scratch. Steps left in the ray, then the answer it came back with.
 # cc_wait  creeper: Ticks left for the player to answer.
 # cc_range creeper: How far away a player can be to ask for consent from an ignited creeper.
 # cc_qid   creeper + player: Which open question this is. A creeper only listens to the player it holds a question with.

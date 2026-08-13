@@ -7,12 +7,7 @@ tag @e[type=creeper] remove consenting.armed
 tag @e[type=creeper] remove consenting.ignited
 tag @e[type=creeper] remove consenting.swelling
 tag @e[type=creeper] remove consenting.awaiting
-tag @e[type=creeper] remove consenting.going
-tag @e[type=creeper] remove consenting.reachable
-tag @e[type=creeper] remove consenting.hit
-tag @e[type=creeper] remove consenting.src
-tag @e[type=creeper] remove consenting.los_now
-tag @e[type=creeper] remove consenting.asking
+tag @e[type=creeper] remove consenting.detonating
 tag @a remove consenting.asked
 
 dialog clear @a
