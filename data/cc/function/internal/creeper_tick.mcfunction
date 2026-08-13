@@ -1,16 +1,15 @@
 # Run AS/AT an armed creeper
 
-# Already answered and on its way out
-execute if entity @s[tag=consenting.going] run return 0
+# The creeper has been manually detonated (by us), do nothing
+execute if entity @s[tag=consenting.detonating] run return 0
 
 # Waiting on an answer: nothing swells, just the answer clock
 execute if entity @s[tag=consenting.awaiting] run return run function cc:internal/creeper_wait
 
 # line_of_sight reads consenting.swelling as "already swelling", so the latch can only be updated after the call, never before it
-execute if function cc:internal/line_of_sight run tag @s add consenting.los_now
+execute store result score @s cc_ray run function cc:internal/line_of_sight
 tag @s remove consenting.swelling
-execute if entity @s[tag=consenting.los_now] run tag @s add consenting.swelling
-tag @s remove consenting.los_now
+execute if score @s cc_ray matches 1 run tag @s add consenting.swelling
 
 # Once ignited there is no talking it down
 execute if entity @s[tag=consenting.ignited] run tag @s add consenting.swelling
