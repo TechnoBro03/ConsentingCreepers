@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "description": "A datapack where Creepers ask consent before exploding",
+    "min_format": [ 101, 1 ],
+    "max_format": 107
+  }
+}

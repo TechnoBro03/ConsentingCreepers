@@ -1,0 +1,71 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Explosion Consent Request",
+  "external_title": "Creeper Consent",
+  "can_close_with_escape": true,
+  "pause": false,
+  "after_action": "close",
+  "columns": 2,
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 320,
+      "contents": {
+        "text": "A creeper would like to explode near you.\n\nDo you consent?"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "width": 320,
+      "contents": {
+        "text": "You have 10 seconds to respond before the creeper explodes.",
+        "color": "gray",
+        "italic": true
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": {
+        "text": "Yes, I consent",
+        "color": "red"
+      },
+      "tooltip": {
+        "text": "BOOM :)"
+      },
+      "width": 150,
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger cc_consent set 1"
+      }
+    },
+    {
+      "label": {
+        "text": "No, thank you",
+        "color": "green"
+      },
+      "tooltip": {
+        "text": "No boom :("
+      },
+      "width": 150,
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger cc_consent set 2"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": {
+      "text": "Exit",
+      "color": "yellow"
+    },
+    "tooltip": {
+      "text": "⚠THE CREEPER WILL EXPLODE⚠"
+    },
+    "width": 310,
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger cc_consent set 1"
+    }
+  }
+}
