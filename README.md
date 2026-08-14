@@ -22,8 +22,8 @@ When a Creeper is about to explode, it doesn't! It pauses and asks for your cons
 | --- | --- |
 | **Yes, I consent** | It explodes normally. |
 | **No, thank you** | It's dismissed with a puff of hearts. |
-| **No answer within 10 seconds** | It explodes. It only has so much patience... |
-| **Closing the dialog** | Counts as yes, and the exit button says so. |
+| **No answer within 10 seconds** | It explodes normally. |
+| **Closing the dialog** | It explodes normally. |
 
 ## What's different
 
